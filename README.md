@@ -96,57 +96,39 @@ If we open the Network Security Group for our linux vm we can add an inbound sec
 
 <h2>Observing SSH Traffic</h2>
 
-<img src="" height="80%" width="80%" />
-<!--  -->
-<p>
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-</p>
-<br />
+<img src="https://github.com/user-attachments/assets/720aee99-902f-4bc1-82fa-ba8a30c9d2ea" height="80%" width="80%" />
+<!-- ![image](https://github.com/user-attachments/assets/720aee99-902f-4bc1-82fa-ba8a30c9d2ea) -->
 
-<img src="" height="80%" width="80%" />
-<!--  -->
+<img src="https://github.com/user-attachments/assets/56cee4db-c9cc-4068-b627-104b7ae10836" height="80%" width="80%" />
+<!-- ![image](https://github.com/user-attachments/assets/56cee4db-c9cc-4068-b627-104b7ae10836) -->
 <p>
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-</p>
-<br />
-
-<img src="" height="80%" width="80%" />
-<!--  -->
-<p>
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-</p>
-<br />
-
-<img src="" height="80%" width="80%" />
-<!--  -->
-<p>
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+Back in Wireshark we can filter for SSH (Secure Shell Protocol) traffic from our Windows 10 vm. We then can SSH into our linux virtual machine through its private IP address and type the commands ls, pwd, etc. and observe the traffic in wireshark. We also can notice for every key stroke SSH traffic is sent in wireshark.
 </p>
 <br />
 
 <h2>Observing DHCP Traffic</h2>
 
-<img src="" height="80%" width="80%" />
-<!--  -->
+<img src="https://github.com/user-attachments/assets/a5401421-a0bd-495c-8a0d-9f4800b245fd" height="80%" width="80%" />
+<!-- ![image](https://github.com/user-attachments/assets/a5401421-a0bd-495c-8a0d-9f4800b245fd) -->
 <p>
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+Now in wireshark if we filter for DHCP traffic only we can attempt to issue a new IP address from the command line using ipconfig /renew
 </p>
 <br />
 
 <h2>Observing DNS Traffic</h2>
 
-<img src="" height="80%" width="80%" />
-<!--  -->
+<img src="https://github.com/user-attachments/assets/1a824eb4-7804-44ca-a82b-4706026c53bc" height="80%" width="80%" />
+<!-- ![image](https://github.com/user-attachments/assets/1a824eb4-7804-44ca-a82b-4706026c53bc) -->
 <p>
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+In Wireshark we can filter for DNS traffic only and to do this in our windows vm we can use the command line and use nslookup on for example google.com's ip address to observe the DNS traffic being shown in Wireshark.
 </p>
 <br />
 
 <h2>Observing RDP Traffic</h2>
 
-<img src="" height="80%" width="80%" />
-<!--  -->
+<img src="https://github.com/user-attachments/assets/0e9a2599-7c34-4e98-9d3c-bcd23cc2f32d" height="80%" width="80%" />
+<!-- ![image](https://github.com/user-attachments/assets/0e9a2599-7c34-4e98-9d3c-bcd23cc2f32d) -->
 <p>
-Finnally we will .
+Finnally we will filter for RDP traffic by using "tcp.port==3389" to observe a non-stop stream of traffic because we are currently using RDP to access the windows vm.
 </p>
 <br />
